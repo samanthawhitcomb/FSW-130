@@ -1,17 +1,17 @@
 import React from "react"
-import ThemeContext from "./themeContext"
+import {ThemeConsumer} from "./themeContext"
 
 function Footer(props) {
     return (
-        <ThemeContext.Consumer>
+        <ThemeConsumer>
             {context => (            
                 <footer className={`${context.theme}-theme`} id= "themeSelector">
-                    <h2 value ="light">{context === "light" ? "Light" : "Dark"} Theme</h2>
+                    <h2 value ="light">{context.theme === "light" ? "Light" : "Dark"} Theme</h2>
                     <button onClick={context.toggleTheme} className={`${context.theme}-theme`}>Switch Theme</button>
                 </footer>)}
                 
             
-        </ThemeContext.Consumer>
+        </ThemeConsumer>
 
     )    
 }

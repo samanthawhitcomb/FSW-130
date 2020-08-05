@@ -1,20 +1,22 @@
 import React from "react"
-import ThemeContext from "./themeContext"
+import {ThemeConsumerTop} from "./themeContextTop"
 
 function Button(props) {
     return (
-      <ThemeContext.Consumer>
-        {({ theme, changeTheme }) => {
+      <ThemeConsumerTop>
+        {({ theme, toggleTheme }) => {
+          console.log(theme)
+          console.log(toggleTheme)
           return (
             <button
-              onClick={() => changeTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
               className={`${theme}-theme`}
             >
               Switch Theme
             </button>
           )
         }}
-      </ThemeContext.Consumer>
+      </ThemeConsumerTop>
     );
     }
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 const {Provider, Consumer} = React.createContext()
 
-class ThemeProvider extends Component {
+class ThemeProviderTop extends Component {
     state = {
         theme: "light"
     }
@@ -24,4 +24,4 @@ class ThemeProvider extends Component {
     }
 }
 
-export {ThemeProvider, Consumer as ThemeConsumer} 
+export {ThemeProviderTop, Consumer as ThemeConsumerTop} 
