@@ -1,10 +1,11 @@
-import React, { Component } from "react"
+import React from "react";
 const {Provider, Consumer} = React.createContext()
 
 class ThemeProviderTop extends Component {
     state = {
         theme: "light"
     }
+    
     toggleTheme = (themeValue) => {
         // let themeValue = document.getElementById("themeSelector").value;
         console.log(this.state.theme)
